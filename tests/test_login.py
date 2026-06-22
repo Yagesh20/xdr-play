@@ -1,14 +1,9 @@
 from pages.login_page import LoginPage
 
-def test_valid_login(page):
 
+def test_login_success(page):
     login = LoginPage(page)
 
-    login.login(
-        "https://accounts-staging.hexnode.com/login/",
-        "yageshwaran.saravanan@mitsogo.com",
-        "Tryhard1!"
-    )
+    login.login()
 
-    # assert "dashboard" in page.url
-    
+    print("Final URL:", page.url)
